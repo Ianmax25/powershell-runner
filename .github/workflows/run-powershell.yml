@@ -1,0 +1,16 @@
+
+name: Run PowerShell
+
+on:
+  workflow_dispatch:
+
+jobs:
+  run-powershell:
+    runs-on: windows-latest
+    steps:
+      - name: Run PowerShell script
+        shell: pwsh
+        run: |
+          Write-Output "PowerShell is running successfully!"
+          $PSVersionTable.PSVersion
+          
